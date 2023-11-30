@@ -1,0 +1,1185 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Animación*/
+
+@keyframes mostrar {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+
+/*Empieza estilos del nav*/
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+}
+
+.logo {
+    height: 7%;
+    width: 7%;
+    padding: 2.5%;
+    cursor: pointer;
+}
+
+nav ul {
+    display: inline-flex;
+    text-align: center;
+}
+
+nav li {
+    list-style: none;
+    padding: 2rem;
+}
+
+nav a:hover{
+    color: orange;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav a{
+    color: black;
+    font-weight: 800;
+}
+
+/*Empieza estilos de la sección inicio*/
+
+/*Estilos container-inicio*/
+
+#inicio{
+    width: 100%;
+    height: 155vh;
+    background: linear-gradient(to top, #ff5e00, #ffa600, #ff5e00);
+
+}
+
+.naruto-rasengan{
+    position: absolute;
+    left: 5%;
+    top: 35%;
+    bottom: 0;
+    width: 20%;
+    height: 60%;
+}
+
+
+.container-inicio{
+    width: 60%;
+    height: 50vh;
+    margin-left: 40%;
+    padding-top: 10%;
+    padding-bottom: 15%;
+}
+
+.container-inicio h2{
+    color: white;
+    font-size: 3rem;
+}
+
+.container-inicio img{
+    height: 65%;
+    width: 65%;
+    padding: 1rem;
+}
+
+.container-inicio button{
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: transparent;
+    color:white;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.7rem;
+    border: 0.2rem solid white;
+    width: 20%;
+    cursor: pointer;
+}
+
+.container-inicio button:hover{
+    color: orange;
+    background-color: white;
+}
+
+/*Estilos contenedor-personajes*/
+
+.contenedor-personajes{
+    display: flex;
+    justify-content: center;
+    height: 45vh;
+    width: 100%;
+
+}
+
+hr{
+    border: 0.1rem solid white;
+}
+
+.preview-personaje{
+    background-color: white;
+    margin: 1.5rem;
+    height: 100%;
+    width: 20%;
+    border-radius: 0.7rem;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.preview-personaje img{
+    margin: 0 auto auto auto;
+    height: 60%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.preview-personaje h2{
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.preview-personaje h3{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 0.2rem;
+    color: grey;
+}
+
+.preview-personaje hr{
+    border: 1px solid black;
+    width: 2.5rem;
+    margin: 0 auto;
+}
+
+.preview-personaje h3:hover{
+    color: orange;
+}
+
+
+/*Empieza estilos de arcos*/
+
+/*Arco Lee-Gaara*/
+
+.arcos{
+    background: #D9D9D9;
+}
+
+.titulo img{
+    width: 40%;
+    height: 40%;
+    padding-left: 10%;
+}
+
+.lee-gaara{
+    height: 100vh;
+    background-color: #D9D9D9;
+}
+
+.cuadrito1{
+    height: 70%;
+    width: 70%;
+    background-color: white;
+    margin-left: 10%;
+    padding: 4rem 2rem; 
+    border-radius: 2%;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.cuadrito1 h1{
+    font-size: 2rem;
+    color: orange;
+
+}
+
+.cuadrito1 p{
+    width: 45%;
+    padding: 0.5rem;
+}
+
+.cuadrito1 button{
+    margin-top: 1rem;
+    padding: 1.2rem;
+    background-color: transparent;
+    color:orange;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.7rem;
+    border: 0.2rem solid orange;
+    width: 22%;
+    cursor: pointer;
+}
+
+.cuadrito1 button:hover{
+    background-color: orange;
+    color: white;
+}
+
+.lee-gaara img{
+    z-index: 2;
+    width: 40%;  
+    height: 60%;  
+    position: absolute;
+    right: 10%;
+    top: 205%;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+
+.cuadrito2{
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    background-color: orange;
+    right: 5%;
+    top: 182%;
+    z-index: 1;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+/*Arco Jiraiya*/
+
+.jiraiya{
+    height: 120vh;
+    /*background: linear-gradient(to top, #ff5e00, #ffa600, #ff5e00);*/
+    background-color: #D9D9D9;
+    display: flex;
+    
+}
+
+.cuadrito1-jiraiya{
+    height: 65%;
+    width: 30%;
+    background-color: white;
+    margin: 5% auto 10% 15%;
+    padding: 3rem 2rem;
+    z-index: 2;
+    border-radius: 2%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.jiraiya img{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 10%;
+    top: 300%;
+    z-index: 1;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.jiraiya h1{
+    font-size: 2rem;
+    color: orange;
+}
+
+.jiraiya p{
+    padding: 0.5rem;
+}
+
+.jiraiya button{
+    margin-top: 1rem;
+    padding: 1.2rem;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.7rem;
+    color: #ffa600;
+    background-color: white;
+    border: 0.2rem solid orange;
+    width: 40%;
+    cursor: pointer;
+}
+
+.jiraiya button:hover{
+    background-color: orange;
+    color: white;
+}
+
+.cuadrito2-jiraiya{
+    width: 50%;
+    height: 50%;
+    background-color: #D9D9D9;
+    opacity: 0.5;
+    position: absolute;
+    top: 355%;
+    left: 10%;
+}
+
+.circulito1-jiraiya{
+    background-color: orange;
+    border-radius: 50%;
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    top: 293%;
+    left: 8%;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+/*Arco Sasuke*/
+
+.sasuke{
+    height: 120vh;
+    background-color: #D9D9D9;
+    display: flex;
+}
+
+.cuadrito1-sasuke{
+    height: 70%;
+    width: 70%;
+    background-color: white;
+    margin-left: 10%;
+    margin-top: 5%;
+    padding: 4rem 2rem; 
+    border-radius: 2%;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.cuadrito1-sasuke h1{
+    font-size: 2rem;
+    width: 50%;
+    color: orange;
+}
+
+.cuadrito1-sasuke p{
+    width: 45%;
+    padding: 0.5rem;
+}
+
+.cuadrito1-sasuke button{
+    margin-top: 1rem;
+    padding: 1.2rem;
+    background-color: white;
+    color:orange;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.7rem;
+    border: 0.2rem solid orange;
+    width: 22%;
+    cursor: pointer;
+}
+
+.cuadrito1-sasuke button:hover{
+    background-color: orange;
+    color: white;
+}
+
+.sasuke img{
+    z-index: 2;
+    width: 40%;  
+    height: 60%;  
+    position: absolute;
+    right: 10%;
+    top: 445%;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+
+.cuadrito2-sasuke{
+    height: 110%;
+    width: 40%;
+    position: absolute;
+    background-color: orange;
+    right: 5%;
+    top: 418%;
+    z-index: 1;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+/*Arco Madara*/
+
+.madara{
+    height: 120vh;
+    background: #D9D9D9;
+    display: flex;
+}
+
+.cuadrito1-madara{
+    height: 65%;
+    width: 30%;
+    background-color: white;
+    margin: 5% auto 10% 15%;
+    padding: 3rem 2rem;
+    z-index: 2;
+    border-radius: 2%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.madara img{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 10%;
+    top: 540%;
+    z-index: 1;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.madara h1{
+    font-size: 2rem;
+}
+
+.madara p{
+    padding: 0.5rem;
+}   
+
+.madara button{
+    margin-top: 0.5rem;
+    padding: 0.9rem;
+    background-color: orange;
+    color:white;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.7rem;
+    border: 0.2rem solid orange;
+    width: 45%;
+    cursor: pointer;
+}
+
+.madara button:hover{
+    background-color: white;
+    color: orange;
+}
+
+.cuadrito2-madara{
+    width: 50%;
+    height: 50%;
+    background-color: orange;
+    opacity: 0.5;
+    position: absolute;
+    top: 590%;
+    left: 10%;
+}
+
+.circulito1-madara{
+    background-color: orange;
+    border-radius: 50%;
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    top: 535%;
+    left: 8%;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+/*Empieza seccion de Soundtracks*/
+
+.soundtracks{
+    display: flex;
+    height: 120vh;
+    background: linear-gradient(to top, #ff5e00, #ffa600, #ff5e00);
+}
+
+.cuadrito1-soundtracks{
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    top: 670%;
+    right: 10%;
+    border-radius: 2%;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+.soundtracks .opening{
+    padding: 1.5rem 0.5rem;
+    width: 100%;
+    
+}
+
+.soundtracks ul{
+    margin-left: 10%;
+}
+
+.soundtracks li{
+    list-style:disc;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.soundtracks li:hover{
+    color: #8DACED;
+}
+
+.soundtracks li::marker{
+    font-size: 2rem;
+    color: #8DACED;
+}
+
+.soundtracks button{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    padding: 1.2rem;
+    background-color: transparent;
+    color:#8DACED;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.7rem;
+    border: 0.2rem solid #8DACED;
+    width: 30%;
+    cursor: pointer;
+}
+
+.soundtracks button:hover{
+    background-color: #8DACED;
+    color: white;
+}
+
+.soundtracks .grande{
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    position: absolute;
+    top: 670%;
+    left: 3%;
+    z-index: 1;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+/*Formulario*/
+
+.formulario{
+    height: 120vh;
+    background-color: orange;
+}
+
+.form-img{
+    margin-left: 10%;
+    width: 40%;
+    height: 20%;
+    
+}
+
+.formulario-chikito{
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    border-radius: 2%;
+    right: 7%;
+    position: absolute;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+}
+
+.img-relleno{
+    position: absolute;
+    left: 15%;
+    top: 800%;
+    width: 20%;
+    height: 75%;
+    view-timeline-name: --cajita;
+    view-timeline-axis: block;
+    animation-timeline: --cajita;
+    animation-name: mostrar;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+form h1{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: orange;
+}
+
+form label{
+    padding: 0.4rem;
+}
+
+form input, textarea{
+    width: 95%;
+    padding: 0.7rem;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    border: 2px solid orange;
+}
+
+textarea{
+    height: 5rem;
+}
+
+form button{
+    margin-top: 1rem;
+    padding: 1.2rem;
+    background-color: transparent;
+    color:orange;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.7rem;
+    border: 0.2rem solid orange;
+    width: 100%;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: orange;
+    color: white;
+}
+
+/*Footer*/
+.footer-naruto {
+    background-color: rgb(75, 72, 72);
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-chikito {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0.5rem;
+}
+
+footer a:hover{
+    color: black;
+}
+
+footer p{
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.footer-img{
+    padding-top: 3rem;
+    width: 80%;
+    height: 60%;
+}
+
+.footer-gif{
+    padding-left: 10%;
+    margin: 0%;
+    width: 90%;
+    height: 60%;
+}
+
+.footer li:hover{
+    color: orange;
+}
+
+/*Estilos para celular*/
+
+@media (max-width: 767px){
+
+    nav li {
+        list-style: none;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .logo {
+    height: 10%;
+    width: 20%;
+    padding: 2.5%;
+    cursor: pointer;
+    }
+
+    #inicio{
+        width: 100%;
+        height: 115vh;
+        background: linear-gradient(to top, #ff5e00, #ffa600, #ff5e00);
+        
+    }
+    
+    .naruto-rasengan{
+        position: absolute;
+        left: 5%;
+        top: 25%;
+        bottom: 0;
+        width: 20%;
+        height: 30%;
+    }
+    
+    
+    .container-inicio{
+        width: 60%;
+        height: 50vh;
+        margin-left: 40%;
+        padding-top: 10%;
+        padding-bottom: 15%;
+    }
+    
+    .container-inicio h2{
+        color: white;
+        font-size: 2rem;
+    }
+    
+    .container-inicio img{
+        height: 35%;
+        width: 65%;
+        padding: 1rem;
+    }
+    
+    .container-inicio button{
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: transparent;
+        color:white;
+        font-size: 1rem;
+        font-weight: 800;
+        border-radius: 0.7rem;
+        border: 0.2rem solid white;
+        width: 50%;
+        cursor: pointer;
+    }
+    
+/*Estilos contenedor-personajes*/
+    
+    .contenedor-personajes{
+        display: flex;
+        justify-content: center;
+        height: 45vh;
+        width: 100%;
+    }
+    
+    .preview-personaje{
+        background-color: white;
+        margin: 1rem auto 0 auto;
+        height: 80%;
+        width: 20%;
+        border-radius: 0.7rem;
+        view-timeline-name: --cajita;
+        view-timeline-axis: block;
+        animation-timeline: --cajita;
+        animation-name: mostrar;
+        animation-range: entry 25% cover 50%;
+        animation-fill-mode: both;
+    }
+    
+    .preview-personaje h2{
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .preview-personaje h3{
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-bottom: 0.2rem;
+        color: grey;
+    }
+    
+    .preview-personaje hr{
+        border: 1px solid black;
+        width: 2rem;
+        margin: 0 auto;
+    }
+    
+    /*Estilos  arcos*/
+
+        .titulo img {
+            width: 80%;
+            height: auto;
+            padding-left: 4%;
+            margin: 0 auto;
+            display: block;
+        }
+    
+        /* Adapta la sección lee-gaara */
+        .lee-gaara {
+            height: auto; /* Ajusta el alto */
+            text-align: center;
+        }
+    
+        /* Adapta cuadrito1 */
+        .cuadrito1 {
+            width: 85%;  /* Ajusta el ancho */
+            height: 50rem;
+            margin-left: 5%; /* Centra el cuadrito */
+            padding: 2rem 1rem; /* Reduce el padding */
+            
+        }
+    
+        .cuadrito1 p {
+            width: 100%;  /* Ajusta el ancho del párrafo */
+            padding: 0.2rem; /* Reduce el padding */
+            font-size: 1rem;
+        }
+    
+        .cuadrito1 button {
+            position: absolute;
+            left: 4%;
+            top: 85%;
+            width: 92%;  /* Ajusta el ancho del botón */
+        }
+    
+        /* Adapta la imagen de lee-gaara */
+        .lee-gaara img {
+            position: absolute;
+            top: 217%;
+            left: 13%;
+            height: 40%;
+            width: 75%;
+        }
+    
+        /* Adapta cuadrito2 */
+        .cuadrito2 {
+            display: none;
+        }
+    
+        /*Arco Jiraiya*/
+
+        .jiraiya {
+            flex-direction: column; /* Cambiamos la dirección de los items a vertical */
+            height: auto;
+        }
+    
+        .cuadrito1-jiraiya {
+            width: 85%;
+            height: 50rem;
+            margin: 5% auto;
+            padding: 2rem 1rem;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+    
+        .jiraiya img {
+            width: 75%;
+            height: auto;
+            position: absolute;  /* Cambiamos a posición relativa */
+            top: 365%;
+            left: 10%;
+            z-index: 2;
+            margin: 2rem auto;
+        }
+
+        .jiraiya h1{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .jiraiya p{
+            font-size: 1rem;
+        }
+    
+        .jiraiya p, .jiraiya button {
+            text-align: center; /* Centramos el texto */
+        }
+    
+        .jiraiya button {
+            position: absolute;
+            top: 85%;
+            width: 92%;  /* Ajustamos el ancho del botón */
+            margin: 1rem auto;  /* Centramos el botón */
+        }
+    
+        /* Desactivamos estos estilos para móviles */
+        .cuadrito2-jiraiya, .circulito1-jiraiya {
+            display: none;
+        }
+
+        /*Arco Sasuke*/
+        .sasuke{
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .cuadrito1-sasuke{
+            min-height: 50rem;
+            width: 85%;
+            margin: 5% auto;
+        }
+        
+        .cuadrito1-sasuke h1{
+            font-size: 1.5rem;
+            width: 100%;
+        }
+        
+        .cuadrito1-sasuke p{
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .cuadrito1-sasuke button{
+            position: absolute;
+            left: 5%;
+            width: 90%;
+            top: 85%;
+        }
+        
+        .cuadrito1-sasuke button:hover{
+            background-color: orange;
+            color: white;
+        }
+        
+        .sasuke img{
+            z-index: 2;
+            width: 70%;  
+            height: 30%;  
+            position: absolute;
+            left: 15%;
+            top: 530%;
+            view-timeline-name: --cajita;
+            view-timeline-axis: block;
+            animation-timeline: --cajita;
+            animation-name: mostrar;
+            animation-range: entry 25% cover 50%;
+            animation-fill-mode: both;
+        }
+        
+        
+        .cuadrito2-sasuke{
+            display: none;
+        }
+
+        /* Adaptaciones para el arco Madara */
+    
+        .madara {
+            flex-direction: column;
+            height: auto;
+            margin-top: 50%;
+        }
+    
+        .cuadrito1-madara {
+            width: 85%;
+            height: 50rem;
+            margin: 5% auto;
+            padding: 2rem 1rem;
+        }
+    
+        .madara img {
+            width: 75%;
+            height: auto;
+            position: absolute; /* Cambio a posición relativa */
+            left: 10%;
+            top: 675%;
+            z-index: 2;
+            margin: 2rem auto;
+        }
+    
+        .madara h1, .madara p, .madara button {
+            text-align: center;
+        }
+    
+        .madara button {
+            position: absolute;
+            top: 87%;
+            left:4%;
+            width: 90%;  /* Ajusta el ancho del botón */
+        }
+    
+        .cuadrito2-madara, .circulito1-madara {
+            display: none;  /* Esconde estos elementos en dispositivos móviles */
+        }
+        
+        /*Soundtracks*/
+
+        .soundtracks{
+            height: 95vh;
+        }
+
+        .cuadrito1-soundtracks{
+            z-index: 2;
+            width: 50%;
+            height: 60%;
+            top: 760%;
+            right: 5%;
+        }
+
+        .soundtracks .opening{
+            padding: 1.5rem 0.5rem;
+            width: 100%;
+            position: absolute;
+        }
+
+        .soundtracks ul{
+            margin-top: 40%;
+        }
+
+        .soundtracks li{
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .soundtracks li::marker{
+            font-size: 1rem;
+        }
+        
+        .soundtracks button{
+            margin-top: 2rem;
+            margin-left: 2.5rem;
+            padding: 1.2rem;
+            background-color: transparent;
+            color:#8DACED;
+            font-size: 0.8rem;
+            width: 70%;
+        }
+        
+        .soundtracks .grande{
+            width: 30%;
+            height: 40%;
+            top: 770%;
+            left: 5%;
+        }
+
+        /*Formulario*/
+        
+        .form-img{
+            width: 50%;
+            height: 15%;
+        }
+        
+        .formulario-chikito{
+            width: 40%;
+            height: 80%;
+            background-color: white;
+            border-radius: 2%;
+            right: 7%;
+            position: absolute;
+            view-timeline-name: --cajita;
+            view-timeline-axis: block;
+            animation-timeline: --cajita;
+            animation-name: mostrar;
+            animation-range: entry 25% cover 50%;
+            animation-fill-mode: both;
+        }
+        
+        form{
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .img-relleno{
+            left: 10%;
+            top: 865%;
+            width: 30%;
+            height: 65%;
+        }
+        
+        form h1{
+            font-size: 1.5rem;
+            padding-bottom: 1rem;
+            color: orange;
+        }
+        
+        /*Footer*/
+        
+        .footer-img{
+            padding-top: 5rem;
+            width: 80%;
+            height: 20%;
+        }
+
+}
