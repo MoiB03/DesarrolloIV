@@ -4,9 +4,6 @@ use Parcial3
 
 drop table Header
 
-select * from Header
-where h_texto IN ('Inicio')
-
 create table Header(
 
 	h_img nvarchar(255),
