@@ -4,8 +4,7 @@ use Parcial3
 
 drop table Header
 
-select * from Header
-where h_texto IN ('Inicio')
+SELECT * from Header
 
 create table Header(
 
