@@ -6,10 +6,10 @@ public class Header {
     
     public Header(String h_img, String h_texto) {
         this.h_img = h_img;
-        this.h_texto = h_texto;
+        
     }
 
-    public Header() {
+    public Header(){
     }
     
     public String getH_img() {

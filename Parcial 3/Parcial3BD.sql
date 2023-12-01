@@ -4,7 +4,7 @@ use Parcial3
 
 drop table Header
 
-SELECT * from Header
+SELECT h_texto from Header
 
 create table Header(
 
