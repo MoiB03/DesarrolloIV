@@ -11,6 +11,10 @@ function CargarPagina(){
     obtenerInicio();
     obtenerPersonajesInicio();
     obtenerArcos();
+    obtenerOpeningTitulo();
+    obtenerOpening();
+    obtenerPlaylist();
+    obtenerGif();
 }
 
 /*Funciones para el Header*/
@@ -217,9 +221,7 @@ function imprimirOpening(){
 
 function mapearOpening(opening){
     return ` 
-        <a href="${opening.o_img}"><li>${opening.o_texto}</li></a>
-        <a href="${opening.o_img}"><li>${opening.o_texto}</li></a>
-        <a href="${opening.o_img}"><li>${opening.o_texto}</li></a>
+        <a href="${opening.o_lista}"><li>${opening.o_lista_texto}</li></a>
             `;
 }
 
@@ -244,9 +246,8 @@ function imprimirPlaylist(){
 
 function mapearPlaylist(opening){
     return ` 
-        <a href="${opening.o_img}"><li>${opening.o_texto}</li></a>
-        <a href="${opening.o_img}"><li>${opening.o_texto}</li></a>
-        <a href="${opening.o_img}"><li>${opening.o_texto}</li></a>
+    <a href="${opening.playlist}"><button>${opening.playlist_texto}</button></a>
+
             `;
 }
 
@@ -265,13 +266,14 @@ function imprimirGif(){
     let contenedor = document.getElementById("gif");
 
     if (opening.length > 0) {
-        contenedor.innerHTML += mapearGif(opening[5]); // Toma solo el primer elemento
+        contenedor.innerHTML += mapearGif(opening[0]); // Toma solo el primer elemento
     }
 }          
 
 function mapearGif(opening){
     return ` 
-    <img class="opening" src="${opening.o_img}" alt="">
+    <img class="grande" src="${opening.gif}" alt="">
+
             `;
 }
 
