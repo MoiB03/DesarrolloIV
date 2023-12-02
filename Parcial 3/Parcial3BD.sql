@@ -30,14 +30,13 @@ create table Inicio(
 
 	i_titulo_img nvarchar(255),
 	i_titulo nvarchar(255),
-
-
+	inicio_img nvarchar(255),
+	i_texto nvarchar(255)
 
 )
 
-insert into Inicio(i_img, i_texto)
-		    values('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/2560px-Naruto_logo.svg.png','Acerca de'),
-				  (NULL,'Saber Más')
+insert into Inicio(i_titulo_img, i_titulo, inicio_img, i_texto)
+		    values('https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/Pagina/img/naruto-rasengan.png?raw=true','Acerca de...','https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/2560px-Naruto_logo.svg.png','Saber más')
 
 select * from Inicio
 
@@ -89,19 +88,24 @@ select * from Arcos
 drop table Openings
 
 create table Openings(
-
+	
 	o_img nvarchar(255),
-	o_texto nvarchar(255)
+	o_lista nvarchar(255),
+	o_lista_texto nvarchar(255),
+	playlist nvarchar(255),
+	playlist_texto nvarchar(255),
+	gif nvarchar(255)
 
 )
 
-insert into Openings(o_img, o_texto)
-			  values('https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/img/mejores_openings.png?raw=true', NULL),
-					('https://www.youtube.com/watch?v=aJRu5ltxXjc&pp=ygURYmx1ZSBiaXJkIG9wZW5pbmc%3D','Blue Bird: Opening 3'),
-					('https://www.youtube.com/watch?v=vxvP9zSOL7s&pp=ygUYaGVybydzIGNvbWUgYmFjayBvcGVuaW5n','Heros Come Back: Opening 1'),
-					('https://www.youtube.com/watch?v=SavhHnWla6c&t=40s&pp=ygUPU2lnbjogT3BlbmluZyA2','Sign: Opening 6'),
-					('https://www.youtube.com/watch?v=4t__wczfpRI&list=PLTGXZPSNXuQF0TugWpvhWbOAAKmyl4xVQ&ab_channel=CrunchyrollDeutschland','Ver lista de openings'),
-					('https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/img/naruto-bailando.gif?raw=true',NULL)
+insert into Openings(o_img, o_lista, o_lista_texto, playlist, playlist_texto, gif)
+			  values('https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/Pagina/img/mejores_openings.png?raw=true','','','','',''),
+					('','https://www.youtube.com/watch?v=aJRu5ltxXjc&pp=ygURYmx1ZSBiaXJkIG9wZW5pbmc%3D','Blue Bird: Opening 3','','',''),
+					('','https://www.youtube.com/watch?v=vxvP9zSOL7s&pp=ygUYaGVybydzIGNvbWUgYmFjayBvcGVuaW5n','Heros Come Back: Opening 1','','',''),
+					('','https://www.youtube.com/watch?v=SavhHnWla6c&t=40s&pp=ygUPU2lnbjogT3BlbmluZyA2','Sign: Opening 6','','',''),
+					('','','','https://www.youtube.com/watch?v=4t__wczfpRI&list=PLTGXZPSNXuQF0TugWpvhWbOAAKmyl4xVQ&ab_channel=CrunchyrollDeutschland','Ver lista de openings',''),
+					('','','','','','https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/Pagina/img/naruto-bailando.gif?raw=true')
+select * from Openings
 
 drop table Formulario
 

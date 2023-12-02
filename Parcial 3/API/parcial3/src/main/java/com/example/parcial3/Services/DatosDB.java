@@ -83,9 +83,11 @@ public class DatosDB {
 
             while (result.next()) {
                 Inicio idato = new Inicio(
-                    result.getString("i_img"),
+                    result.getString("i_titulo_img"),
+                    result.getString("i_titulo"),
+                    result.getString("inicio_img"),
                     result.getString("i_texto")
-                );
+                    );
                 
                 idatos.add(idato);
 
@@ -140,7 +142,11 @@ public class DatosDB {
             while (result.next()) {
                 Openings odato = new Openings(
                     result.getString("o_img"),
-                    result.getString("o_texto")
+                    result.getString("o_lista"),
+                    result.getString("o_lista_texto"),
+                    result.getString("playlist"),
+                    result.getString("playlist_texto"),
+                    result.getString("gif")
                 );
                 
                 odatos.add(odato);
