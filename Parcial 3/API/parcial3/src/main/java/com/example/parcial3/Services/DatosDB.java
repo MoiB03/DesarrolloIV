@@ -23,7 +23,8 @@ public class DatosDB {
             while (result.next()) {
                 Header hdato = new Header(
                     result.getString("h_img"),
-                    result.getString("h_texto")
+                    result.getString("h_texto"),
+                    result.getString("h_enlace")
                 );
                 
                 hdatos.add(hdato);
@@ -50,8 +51,12 @@ public class DatosDB {
 
             while (result.next()) {
                 Arcos adato = new Arcos(
-                    result.getString("a_img"),
-                    result.getString("a_texto")
+                    result.getString("id_arco"),
+                    result.getString("titulo"),
+                    result.getString("resumen_arco"),
+                    result.getString("imagen"),
+                    result.getString("texto_boton"),
+                    result.getString("imagen_titulo")
                 );
                 
                 adatos.add(adato);
@@ -190,8 +195,10 @@ public class DatosDB {
 
             while (result.next()) {
                 Personajes_Inicio pidato = new Personajes_Inicio(
-                    result.getString("pi_img"),
-                    result.getString("pi_texto")
+                    result.getString("id_personaje"),
+                    result.getString("titulo_p"),
+                    result.getString("imagen_p"),
+                    result.getString("boton_p")
                 );
                 
                 pidatos.add(pidato);

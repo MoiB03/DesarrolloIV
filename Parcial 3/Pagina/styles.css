@@ -32,10 +32,16 @@ nav{
 }
 
 .logo {
-    height: 7%;
-    width: 7%;
+    height: 15%;
+    width: 15%;
     padding: 2.5%;
     cursor: pointer;
+}
+
+#encabezado_img{
+    height: 50%;
+    width: 50%;
+    margin-left: 1%;
 }
 
 nav ul {
