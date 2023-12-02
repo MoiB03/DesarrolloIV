@@ -107,18 +107,19 @@ drop table Formulario
 create table Formulario(
 
 	form_img nvarchar(255),
-	form_texto nvarchar(255)
+	form_texto nvarchar(255),
+	form_nombre nvarchar(255),
+	form_correo nvarchar(255),
+	form_mens nvarchar(255),
+	form_env nvarchar (255)
 
 )
 
-insert into	Formulario(form_img, form_texto)
-				values('https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/img/formulario.png?raw=true',NULL),
-					  ('https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/img/gaara-formulario.png?raw=true',NULL),
-					  (NULL,'Suscríbete'),
-					  (NULL,'Nombre:'),
-					  (NULL,'Email:'),
-					  (NULL,'Mensaje:'),
-					  (NULL,'Enviar')
+insert into	Formulario(form_img, form_texto, form_nombre, form_correo, form_mens,form_env)
+				values('https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/img/formulario.png?raw=true','Suscríbete','Nombre:','Email:','Mensaje:', 'Enviar'),
+					  ('https://github.com/MoiB03/DesarrolloIV/blob/main/Parcial%203/img/gaara-formulario.png?raw=true','','','','','')
+
+					  select * from Formulario
 
 Drop table Footer
 create table Footer(

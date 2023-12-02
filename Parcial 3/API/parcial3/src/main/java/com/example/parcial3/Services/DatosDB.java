@@ -114,7 +114,11 @@ public class DatosDB {
             while (result.next()) {
                 Formulario formdato = new Formulario(
                     result.getString("form_img"),
-                    result.getString("form_texto")
+                    result.getString("form_texto"),
+                    result.getString("form_nombre"),
+                    result.getString("form_correo"),
+                    result.getString("form_mens"),
+                    result.getString("form_env")
                 );
                 
                 formdatos.add(formdato);

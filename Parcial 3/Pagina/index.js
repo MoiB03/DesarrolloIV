@@ -4,6 +4,7 @@ let inicio = [];
 let personajesInicio = [];
 let arcos = [];
 let opening = [];
+let formulario = [];
 
 function CargarPagina(){
     obtenerHeaderImg();
@@ -15,6 +16,9 @@ function CargarPagina(){
     obtenerOpening();
     obtenerPlaylist();
     obtenerGif();
+    obtenerFormularioT();
+    obtenerFormularioImg1();
+    obtenerFormularioImg2();
 }
 
 /*Funciones para el Header*/
@@ -122,7 +126,7 @@ function mapearPersonajesInicio(personajesInicio){
     <div class="preview-personaje">
         <img src="${personajesInicio.imagen_p}" alt="">
         <h2>${personajesInicio.titulo_p}</h2>
-        <a href="">${personajesInicio.boton_p}</a>
+        <a href=""><h3>${personajesInicio.boton_p}</h3></a>
         <hr>
     </div>
             `;
@@ -134,7 +138,10 @@ function obtenerArcos(){
     fetch(baseurl + '/datos/arcos').then(res=>{
         res.json().then(json=>{
             arcos = json;
-            imprimirArcos();
+            imprimirArcos1();
+            imprimirArcos2();
+            imprimirArcos3();
+            imprimirArcos4();
             imprimirArcostitulo();
         });
     });
@@ -143,9 +150,9 @@ function obtenerArcos(){
 function imprimirArcos1(){
     let contenedor = document.getElementById("personajesArcos1");
 
-    arcos.forEach(arcos=>{
-        contenedor.innerHTML += mapearArcos1(arcos);
-    });
+    if (arcos.length > 0) {
+        contenedor.innerHTML += mapearArcos1(arcos[0]); // Toma solo el primer elemento
+    }
 }  
 
 function mapearArcos1(arcos){
@@ -163,20 +170,62 @@ function mapearArcos1(arcos){
 function imprimirArcos2(){
     let contenedor = document.getElementById("personajesArcos2");
 
-    arcos.forEach(arcos=>{
-        contenedor.innerHTML += mapearArcos2(arcos);
-    });
+    if (arcos.length > 0) {
+        contenedor.innerHTML += mapearArcos2(arcos[1]); 
+    }
 }  
 
 function mapearArcos2(arcos){
     return `
-            <div class="cuadrito1">
+        <div class="cuadrito1-jiraiya">
+        <h1>${arcos.titulo}</h1>
+        <p>${arcos.resumen_arco}</p>
+        <a href=""><button>${arcos.texto_boton}</button></a>
+        </div>
+        <img src="${arcos.imagen}" alt="">
+        <div class="cuadrito2-jiraiya"></div>
+        <div class="circulito1-jiraiya"></div>
+    `;
+}
+
+function imprimirArcos3(){
+    let contenedor = document.getElementById("personajesArcos3");
+
+    if (arcos.length > 0) {
+        contenedor.innerHTML += mapearArcos3(arcos[2]);
+    }
+}  
+
+function mapearArcos3(arcos){
+    return `
+            <div class="cuadrito1-sasuke">
                 <h1>${arcos.titulo}</h1>
                 <p>${arcos.resumen_arco}</p>
                 <a href=""><button>${arcos.texto_boton}</button></a>
             </div>
-            <div class="cuadrito2"></div>
+            <div class="cuadrito2-sasuke"></div>
             <img src="${arcos.imagen}" alt="" class="img">
+    `;
+}
+
+function imprimirArcos4(){
+    let contenedor = document.getElementById("personajesArcos4");
+
+    if (arcos.length > 0) {
+        contenedor.innerHTML += mapearArcos4(arcos[3]); 
+    }
+}  
+
+function mapearArcos4(arcos){
+    return `
+        <div class="cuadrito1-madara">
+        <h1>${arcos.titulo}</h1>
+        <p>${arcos.resumen_arco}</p>
+        <a href=""><button>${arcos.texto_boton}</button></a>
+        </div>
+        <img src="${arcos.imagen}" alt="">
+        <div class="cuadrito2-madara"></div>
+        <div class="circulito1-madara"></div>
     `;
 }
 
@@ -190,7 +239,7 @@ function imprimirArcostitulo(){
 }
 
 function mapearTituloArcos(arcos){
-    return ` <img src="${arcos.imagen}" alt="">
+    return ` <img src="${arcos.imagen_titulo}" alt="">
     `;
 }
 
@@ -211,7 +260,7 @@ function imprimirOpeningTitulo(){
     let contenedor = document.getElementById("op_titulo");
 
     if (opening.length > 0) {
-        contenedor.innerHTML += mapearheaderImg(opening[0]); // Toma solo el primer elemento
+        contenedor.innerHTML += mapearOpeningTitulo(opening[0]); // Toma solo el primer elemento
     }
 }          
 
@@ -259,9 +308,9 @@ function obtenerPlaylist(){
 function imprimirPlaylist(){
     let contenedor = document.getElementById("playlist");
 
-    opening.forEach(opening=>{
-        contenedor.innerHTML += mapearPlaylist(opening);
-    });
+    if (opening.length > 0) {
+        contenedor.innerHTML += mapearPlaylist(opening[0]);
+    }
 }          
 
 function mapearPlaylist(opening){
@@ -297,15 +346,173 @@ function mapearGif(opening){
             `;
 }
 
+/*Funciones para Formularios*/ 
+
+function obtenerFormularioImg1(){
+    fetch(baseurl + '/datos/formulario').then(res=>{
+        res.json().then(json=>{
+            formulario = json;
+            imprimirFormularioImg1();
+        });
+    });
+}
+
+function imprimirFormularioImg1(){
+    let contenedor = document.getElementById("formulario");
+
+    if (formulario.length > 0) {
+        contenedor.innerHTML += mapearFormularioImg1(formulario[0]); 
+    }
+}          
+
+function mapearFormularioImg1(formulario){
+    return ` 
+    <img class="form-img" src="${formulario.form_img}" alt="">
+            `;
+}
+
+function obtenerFormularioImg2(){
+    fetch(baseurl + '/datos/formulario').then(res=>{
+        res.json().then(json=>{
+            formulario = json;
+            imprimirFormularioImg2();
+        });
+    });
+}
+
+function imprimirFormularioImg2(){
+    let contenedor = document.getElementById("form_img");
+
+    if (formulario.length > 0) {
+        contenedor.innerHTML += mapearFormularioImg2(formulario[1]); 
+    }
+}          
+
+function mapearFormularioImg1(formulario){
+    return ` 
+    <img class="img-relleno" src="${formulario.form_img}" alt="">
+
+            `;
+}
+
+function obtenerFormularioT(){
+    fetch(baseurl + '/datos/formulario').then(res=>{
+        res.json().then(json=>{
+            formulario = json;
+            imprimirFormularioT();
+        });
+    });
+}
+
+function imprimirFormularioT(){
+    let contenedor = document.getElementById("form_datos");
+
+    formulario.forEach(formulario=>{
+        contenedor.innerHTML += mapearFormularioT(formulario);
+    });
+}          
+
+function mapearFormularioT(formulario){
+    return ` 
+        <form action="">
+            <h1>${formulario.form_texto}</h1>
+            <label for="nombre">${formulario.form_nombre}</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+            <label for="email">${formulario.form_correo}</label>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu email">
+            <label for="mensaje">${formulario.form_mens}</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe un mensaje"></textarea>
+            <a href=""><button>${formulario.form_env}</button></a>
+        </form>
+            `;
+}
 
 
+/*Funcion para mapear el Footer */
+function obtenerFooterEnlaces(){
+    fetch(baseurl + '/datos/footer').then(res=>{
+        res.json().then(json=>{
+            footer = json;
+            imprimirFooterEnlaces();
+            imprimirEnlaceRapido();
+            imprimirLogoNaruto();
+            imprimirGifFooter();
+            imprimirFooterDerechos();
+        });
+    });
+}
+
+function imprimirFooterEnlaces(){
+    let contenedor = document.getElementById("footerEnlaces");
+
+    footer.forEach(footer=>{
+        contenedor.innerHTML += mapearFooterEnlaces(footer);
+    });
+}
+
+function mapearFooterEnlaces(footer){
+    return ` 
+             <li><a href="${footer.footer_enlace}">${footer.footer_texto}</a></li>
+            `;
+}
 
 
+function imprimirEnlaceRapido(){
+    let contenedor = document.getElementById("enlacesRapidos");
+
+    if (footer.length > 0) {
+        contenedor.innerHTML += mapearEnlaceRapido(footer[1]); // Toma solo el segundo elemento
+    }
+}          
+
+function mapearEnlaceRapido(footer){
+    return ` 
+    <h2>${footer.footer_texto}</h2>
+            `;
+}
+
+function imprimirGifFooter(){
+    let contenedor = document.getElementById("footerLogoNaruto");
+
+    if (footer.length > 0) {
+        contenedor.innerHTML += mapearLogoNaruto(footer[0]); // Toma solo el primer elemento
+    }
+}
+
+function mapearLogoNaruto(footer){
+    return ` 
+        <img src = "${footer.footer_imagen}" alt="logo Naruto" class="footer-img">
+            `;
+}
 
 
+function imprimirLogoNaruto(){
+    let contenedor = document.getElementById("footerGif");
 
+    if (footer.length > 0) {
+        contenedor.innerHTML += mapearFooterGif(footer[6]);
+    }
+}
 
+function mapearFooterGif(footer){
+    return ` 
+        <img src="${footer.footer_imagen}" alt="" class="footer-gif">
+            `;
+}
 
+function imprimirFooterDerechos(){
+    let contenedor = document.getElementById("footerDerechos");
+
+    if (footer.length > 0) {
+        contenedor.innerHTML += mapearFooterDerechos(footer[6]);
+    }
+}
+
+function mapearFooterDerechos(footer){
+    return ` 
+        <p>${footer.footer_texto}</p>
+            `;
+}
 
 
 document.body.onload = CargarPagina();
