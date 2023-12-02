@@ -120,21 +120,21 @@ insert into	Formulario(form_img, form_texto)
 					  (NULL,'Mensaje:'),
 					  (NULL,'Enviar')
 
-drop table Footer
-
+Drop table Footer
 create table Footer(
-
-	foot_img nvarchar(255),
-	foot_texto nvarchar(255)
-
+	id_footer nvarchar(255),
+	footer_enlace nvarchar(255),
+	footer_texto nvarchar(255),
+	footer_imagen nvarchar(255)
 )
 
+insert into Footer(id_footer, footer_enlace, footer_texto, footer_imagen)
+		    values('1',NULL,NULL,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/2560px-Naruto_logo.svg.png'),
+				  ('2',NULL,'Enlaces Rápidos',NULL),
+				  ('3','#inicio','Inicio',NULL),
+				  ('4','#arcos','Mejores Arcos',NULL),
+				  ('5','#openings','Openings',NULL),
+				  ('6','#formulario','Formulario',NULL),
+				  ('7',NULL,'? 2023 Fanpage Naruto. Todos los derechos reservados.','https://i.gifer.com/YAS0.gif')
 
-insert into Footer(foot_img, foot_texto)
-			values('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Naruto_logo.svg/2560px-Naruto_logo.svg.png',NULL),
-				  (NULL,'Enlaces Rápidos'),
-				  (NULL,'Inicio'),
-				  (NULL,'Mejores Arcos'),
-				  (NULL,'Openings'),
-				  (NULL,'Formulario'),
-				  ('https://i.gifer.com/YAS0.gif', '© 2023 Fanpage Naruto. Todos los derechos reservados.')
+SELECT * FROM Footer

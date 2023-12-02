@@ -140,15 +140,35 @@ function obtenerArcos(){
     });
 }
 
-function imprimirArcos(){
-    let contenedor = document.getElementById("personajesArcos");
+function imprimirArcos1(){
+    let contenedor = document.getElementById("personajesArcos1");
 
     arcos.forEach(arcos=>{
-        contenedor.innerHTML += mapearArcos(arcos);
+        contenedor.innerHTML += mapearArcos1(arcos);
     });
 }  
 
-function mapearArcos(arcos){
+function mapearArcos1(arcos){
+    return `
+            <div class="cuadrito1">
+                <h1>${arcos.titulo}</h1>
+                <p>${arcos.resumen_arco}</p>
+                <a href=""><button>${arcos.texto_boton}</button></a>
+            </div>
+            <div class="cuadrito2"></div>
+            <img src="${arcos.imagen}" alt="" class="img">
+    `;
+}
+
+function imprimirArcos2(){
+    let contenedor = document.getElementById("personajesArcos2");
+
+    arcos.forEach(arcos=>{
+        contenedor.innerHTML += mapearArcos2(arcos);
+    });
+}  
+
+function mapearArcos2(arcos){
     return `
             <div class="cuadrito1">
                 <h1>${arcos.titulo}</h1>
